@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,17 +12,38 @@ using ASP.NETAssignment6.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Autofac;
 
 namespace ASP.NETAssignment6
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IWebHostEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
+            this.Configuration = builder.Build();
         }
+        public IConfigurationRoot Configuration { get; private set; }
 
-        public IConfiguration Configuration { get; }
+        public static ILifetimeScope AutofacContainer { get; private set; }
+
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            var connectionStringName = "DefaultConnection";
+            var connectionString = Configuration.GetConnectionString(connectionStringName);
+            var migrationAssemblyName = typeof(Startup).Assembly.FullName;
+
+            builder.RegisterType<StoreContext>()
+                   .WithParameter("connectionString", connectionString)
+                   .WithParameter("migrationAssemblyName", migrationAssemblyName)
+                   .InstancePerLifetimeScope();
+
+            //builder.RegisterModule(new FrameworkModule(connectionString, migrationAssemblyName));
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -30,6 +51,15 @@ namespace ASP.NETAssignment6
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
+            var connectionStringName = "DefaultConnection";
+            var connectionString = Configuration.GetConnectionString(connectionStringName);
+            var migrationAssemblyName = typeof(Startup).Assembly.FullName;
+
+            services.AddDbContext<StoreContext>(options =>
+                options.UseSqlServer(connectionString, b => b.MigrationsAssembly(migrationAssemblyName)));
+
+
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
@@ -41,8 +71,9 @@ namespace ASP.NETAssignment6
         {
             if (env.IsDevelopment())
             {
+                //app.UseDeveloperExceptionPage();
+                //app.UseDatabaseErrorPage();
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
             }
             else
             {
@@ -62,7 +93,7 @@ namespace ASP.NETAssignment6
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Students}/{action=Create}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "areas",
                     pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");

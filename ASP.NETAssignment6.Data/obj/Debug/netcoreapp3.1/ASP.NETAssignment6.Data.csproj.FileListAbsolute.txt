@@ -1,0 +1,8 @@
+D:\DevSkillAssignment6\ASP.NETAssignment6.Data\bin\Debug\netcoreapp3.1\ASP.NETAssignment6.Data.deps.json
+D:\DevSkillAssignment6\ASP.NETAssignment6.Data\bin\Debug\netcoreapp3.1\ASP.NETAssignment6.Data.dll
+D:\DevSkillAssignment6\ASP.NETAssignment6.Data\obj\Debug\netcoreapp3.1\ASP.NETAssignment6.Data.AssemblyInfoInputs.cache
+D:\DevSkillAssignment6\ASP.NETAssignment6.Data\obj\Debug\netcoreapp3.1\ASP.NETAssignment6.Data.AssemblyInfo.cs
+D:\DevSkillAssignment6\ASP.NETAssignment6.Data\bin\Debug\netcoreapp3.1\ASP.NETAssignment6.Data.pdb
+D:\DevSkillAssignment6\ASP.NETAssignment6.Data\obj\Debug\netcoreapp3.1\ASP.NETAssignment6.Data.dll
+D:\DevSkillAssignment6\ASP.NETAssignment6.Data\obj\Debug\netcoreapp3.1\ASP.NETAssignment6.Data.pdb
+D:\DevSkillAssignment6\ASP.NETAssignment6.Data\obj\Debug\netcoreapp3.1\ASP.NETAssignment6.Data.csprojAssemblyReference.cache

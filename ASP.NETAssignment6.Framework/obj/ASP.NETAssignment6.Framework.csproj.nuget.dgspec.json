@@ -1,0 +1,142 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\DevSkillAssignment6\\ASP.NETAssignment6.Framework\\ASP.NETAssignment6.Framework.csproj": {}
+  },
+  "projects": {
+    "D:\\DevSkillAssignment6\\ASP.NETAssignment6.Data\\ASP.NETAssignment6.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DevSkillAssignment6\\ASP.NETAssignment6.Data\\ASP.NETAssignment6.Data.csproj",
+        "projectName": "ASP.NETAssignment6.Data",
+        "projectPath": "D:\\DevSkillAssignment6\\ASP.NETAssignment6.Data\\ASP.NETAssignment6.Data.csproj",
+        "packagesPath": "C:\\Users\\Sakhawat Hosen\\.nuget\\packages\\",
+        "outputPath": "D:\\DevSkillAssignment6\\ASP.NETAssignment6.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sakhawat Hosen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DevSkillAssignment6\\ASP.NETAssignment6.Framework\\ASP.NETAssignment6.Framework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DevSkillAssignment6\\ASP.NETAssignment6.Framework\\ASP.NETAssignment6.Framework.csproj",
+        "projectName": "ASP.NETAssignment6.Framework",
+        "projectPath": "D:\\DevSkillAssignment6\\ASP.NETAssignment6.Framework\\ASP.NETAssignment6.Framework.csproj",
+        "packagesPath": "C:\\Users\\Sakhawat Hosen\\.nuget\\packages\\",
+        "outputPath": "D:\\DevSkillAssignment6\\ASP.NETAssignment6.Framework\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sakhawat Hosen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\DevSkillAssignment6\\ASP.NETAssignment6.Data\\ASP.NETAssignment6.Data.csproj": {
+                "projectPath": "D:\\DevSkillAssignment6\\ASP.NETAssignment6.Data\\ASP.NETAssignment6.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
