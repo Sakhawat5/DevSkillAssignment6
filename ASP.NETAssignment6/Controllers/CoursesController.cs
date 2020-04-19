@@ -33,5 +33,35 @@ namespace ASP.NETAssignment6.Controllers
 
             return View(course);
         }
+        public IActionResult Edit(int id)
+        {
+            var course = _storeContext.Courses.Find(id);
+            return View(course);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Course course)
+        {
+            _storeContext.Update(course);
+            _storeContext.SaveChanges();
+
+            return View();
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var course = _storeContext.Courses.Find(id);
+            return View(course);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Course course)
+        {
+            Course courseData = _storeContext.Courses.Find(course.Id);
+            _storeContext.Courses.Remove(courseData);
+            _storeContext.SaveChanges();
+            return View(course);
+        }
+
     }
 }

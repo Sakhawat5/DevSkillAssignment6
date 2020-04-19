@@ -27,8 +27,8 @@ namespace ASP.NETAssignment6.Controllers
 
         public IActionResult Create()
         {
-            ViewData["CourseId"] = new SelectList(_storeContext.Courses, "Id", "Id");
-            ViewData["StudentId"] = new SelectList(_storeContext.Students, "Id", "Id");
+            ViewData["CourseId"] = new SelectList(_storeContext.Courses, "Id", "Title");
+            ViewData["StudentId"] = new SelectList(_storeContext.Students, "Id", "Name");
             return View();
         }
 
@@ -38,9 +38,9 @@ namespace ASP.NETAssignment6.Controllers
             _storeContext.Add(studentRegistration);
             _storeContext.SaveChanges();
 
-            ViewData["CourseId"] = new SelectList(_storeContext.Courses, "Id", "Id", studentRegistration.CourseId);
-            ViewData["StudentId"] = new SelectList(_storeContext.Students, "Id", "Id", studentRegistration.StudentId);
-            return View(studentRegistration);
+            ViewData["CourseId"] = new SelectList(_storeContext.Courses, "Id", "Title", studentRegistration.CourseId);
+            ViewData["StudentId"] = new SelectList(_storeContext.Students, "Id", "Name", studentRegistration.StudentId);
+            return RedirectToAction("Index", studentRegistration);
         }
 
     }
