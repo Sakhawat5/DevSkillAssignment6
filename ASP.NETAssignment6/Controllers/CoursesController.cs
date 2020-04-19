@@ -17,7 +17,9 @@ namespace ASP.NETAssignment6.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            List<Course> courses = _storeContext.Courses.ToList();
+
+            return View(courses);
         }
 
         public IActionResult Create()
