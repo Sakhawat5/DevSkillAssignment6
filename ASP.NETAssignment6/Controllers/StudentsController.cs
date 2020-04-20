@@ -35,5 +35,30 @@ namespace ASP.NETAssignment6.Controllers
             _storeContext.SaveChanges();
             return View(student);
         }
+
+        public IActionResult Edit(int id)
+        {
+            var student = _storeContext.Students.FirstOrDefault(x => x.Id == id);
+            return View(student);
+        }
+        [HttpPost]
+        public IActionResult Edit(Student student)
+        {
+            _storeContext.Students.Update(student);
+            _storeContext.SaveChanges();
+            return RedirectToAction("Index", "Students");
+        }
+        public IActionResult Delete(int id)
+        {
+            var student = _storeContext.Students.FirstOrDefault(x => x.Id == id);
+            return View(student);
+        }
+        [HttpPost]
+        public IActionResult Delete(Student student)
+        {
+            _storeContext.Students.Remove(student);
+            _storeContext.SaveChanges();
+            return RedirectToAction("Index", "Students");
+        }
     }
 }

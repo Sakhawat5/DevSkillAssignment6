@@ -1,0 +1,30 @@
+﻿@model ASP.NETAssignment6.Framework.Student
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-md-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-md-2">
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+        <dd class="col-md-10">
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-primary" /> |
+        <a asp-action="Index">Back to List</a>
+
+    </form>
+</div>

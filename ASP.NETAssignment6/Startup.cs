@@ -93,7 +93,7 @@ namespace ASP.NETAssignment6
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Students}/{action=Create}/{id?}");
+                    pattern: "{controller=Students}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "areas",
                     pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");

@@ -330,3 +330,7 @@ D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\St
 D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\StudentRegistrations\Index.cshtml.g.cs
 D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\Students\Index.cshtml.g.cs
 D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Index.cshtml.g.cs
+D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Edit.cshtml.g.cs
+D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\Students\Edit.cshtml.g.cs
+D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\Students\Delete.cshtml.g.cs
+D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Delete.cshtml.g.cs

@@ -62,7 +62,7 @@ namespace ASP.NETAssignment6.Controllers
             Course courseData = _storeContext.Courses.Find(course.Id);
             _storeContext.Courses.Remove(courseData);
             _storeContext.SaveChanges();
-            return View(course);
+            return RedirectToAction("Index", "Courses");
         }
 
     }
