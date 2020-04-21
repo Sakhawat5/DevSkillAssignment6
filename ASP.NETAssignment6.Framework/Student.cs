@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,4 +13,5 @@ namespace ASP.NETAssignment6.Framework
         public DateTime DateOfBirth { get; set; }
         public ICollection<StudentRegistration> StudentRegistrations { get; set; }
     }
+
 }

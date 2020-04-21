@@ -33,7 +33,7 @@ namespace ASP.NETAssignment6.Controllers
         {
             _storeContext.Students.Add(student);
             _storeContext.SaveChanges();
-            return View(student);
+            return RedirectToAction("Index", "Students");
         }
 
         public IActionResult Edit(int id)
