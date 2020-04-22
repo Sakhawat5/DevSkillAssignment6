@@ -65,5 +65,11 @@ namespace ASP.NETAssignment6.Controllers
             return RedirectToAction("Index", "Courses");
         }
 
+        public IActionResult Details(Course course)
+        {
+            var courseDetails = _storeContext.Courses.SingleOrDefault(x => x.Id == course.Id);
+            return View(courseDetails);
+        }
+
     }
 }

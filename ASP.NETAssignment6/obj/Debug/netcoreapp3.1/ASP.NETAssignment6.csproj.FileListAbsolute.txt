@@ -336,3 +336,5 @@ D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\Co
 D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\StudentRegistrations\Edit.cshtml.g.cs
 D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\StudentRegistrations\Create-Copy.cshtml.g.cs
 D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\StudentRegistrations\Create.cshtml.g.cs
+D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\Students\Details.cshtml.g.cs
+D:\DevSkillAssignment6\ASP.NETAssignment6\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Details.cshtml.g.cs

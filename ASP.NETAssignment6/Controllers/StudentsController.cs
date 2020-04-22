@@ -60,5 +60,10 @@ namespace ASP.NETAssignment6.Controllers
             _storeContext.SaveChanges();
             return RedirectToAction("Index", "Students");
         }
+        public IActionResult Details(Student student)
+        {
+            var studentModel = _storeContext.Students.FirstOrDefault(x => x.Id == student.Id);
+            return View(studentModel);
+        }
     }
 }
